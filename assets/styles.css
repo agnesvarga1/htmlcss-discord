@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
 header,
 .section-1,
 .section-2,
@@ -16,53 +19,77 @@ a {
 }
 header {
   color: white;
-  background-color: black;
+  background-image: url("./img/jumbo.png");
+  background-size: cover;
   padding-block: 2%;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3%;
 }
 
-nav {
-  min-width: 45%;
-}
-
-.nav-bar {
+nav .nav-bar {
+  margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  gap: 10px;
 }
 .nav-bar li {
   list-style-type: none;
+  color: white;
 }
-header figure,
-.btn {
-  min-width: 10%;
-}
-.head-jumbotron {
-  margin: 20px auto 0;
-  width: 45%;
+.nav-bar li a {
+  color: white;
+  font-size: 16px;
 }
 
-.head-content {
-  min-height: 40vh;
-  background-color: #c3d4fb;
+header .accedi {
+  background-color: white;
+  padding: 5px 10px 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: lighter;
+}
+header .accedi a {
+  color: #000000;
+}
+.head-jumbotron {
+  margin: 20px auto 5%;
+  width: 60%;
+  text-align: center;
+}
+
+.head-content h2,
+.head-content p {
+  margin-block: 3%;
+  line-height: 1.5;
+}
+
+.head-content h2 {
+  font-size: 30px;
 }
 
 .head-cta {
-  min-height: 80px;
-  background-color: wheat;
   display: flex;
-}
-.btn-cta1,
-.btn-cta2 {
-  width: 50%;
-  min-height: inherit;
+  justify-content: center;
+  gap: 50px;
 }
 
+.btn-cta1,
 .btn-cta2 {
-  background-color: black;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.btn-cta1 a {
+  color: #000000;
+}
+.btn-cta2 {
+  background-color: #23272a;
+}
+.head-cta .btn-cta2 a {
+  color: white;
 }
 
 .section-3,
