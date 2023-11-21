@@ -6,14 +6,11 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
-header,
-.section-1,
-.section-2,
-.section-3,
-.section-4,
-footer {
-  padding-inline: 10%;
+
+body {
+  color: #23272a;
 }
+
 a {
   text-decoration: none;
 }
@@ -27,6 +24,8 @@ header {
 .header-top {
   display: flex;
   justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
   margin-bottom: 3%;
 }
 
@@ -46,7 +45,7 @@ nav .nav-bar {
 
 header .accedi {
   background-color: white;
-  padding: 5px 10px 0;
+  padding: 10px 20px 0;
   border-radius: 20px;
   text-align: center;
   font-weight: lighter;
@@ -92,43 +91,45 @@ header .accedi a {
   color: white;
 }
 /*////////////section 123//////*/
+
 .section-3,
 .section-2,
 .section-1 {
   padding-block: 2%;
 }
-.flex-container {
+section .flex-container {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
-main figure,
-main article {
-  min-height: 400px;
-}
-main figure {
-  width: 70%;
+
+section figure {
+  width: 60%;
 }
 main .text-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   line-height: 1.5;
 }
 
 main .text-box h3 {
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 2rem;
 }
 
 main .text-box p {
   font-size: 20px;
 }
+section.section:nth-of-type(even) {
+  background-color: #fff;
+}
 
-.section-2,
-.section-4 {
+section.section:last-child {
   background-color: #f6f6f6;
 }
+
 .section-4 {
   padding-block: 2%;
   padding-bottom: 50px;
@@ -139,15 +140,19 @@ main .text-box p {
 .section-4 figure {
   width: 100%;
 }
+
 .section-4 .jumbotron {
-  background-image: url("./img/stars.svg");
-  background-size: contain;
-  background-position: center;
   margin-inline: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+}
+
+.section-4 .jumbotron h3 {
+  background-image: url("./img/stars.svg");
+  background-size: contain;
+  background-position: center;
 }
 
 .section-4 .btn {
@@ -169,33 +174,56 @@ main .text-box p {
 }
 /*////////////footer/////////*/
 footer {
-  min-height: 70vh;
+  color: #fff;
   padding: 40px;
   background-color: #23272a;
+  line-height: 2;
+}
+footer h4 {
+  color: #7289da;
 }
 
 .footer-top {
   display: flex;
   width: 100vw;
-  min-height: 50vh;
   gap: 10px;
+  margin-bottom: 2rem;
 }
-
 .footer-content1,
 .footer-content2,
 .footer-content3,
-.footer-content4 {
-  width: calc(100% / 5.5);
-  min-height: inherit;
-  border: 1px solid white;
+.footer-content4,
+.footer-content5 {
+  width: calc(100% / 7);
 }
 
+.footer-top ul li {
+  list-style-type: none;
+}
+
+.footer-top ul li a {
+  color: white;
+}
+.footer-content1 h4 {
+  font-size: 30px;
+}
 .footer-content1 {
-  flex-basis: 30%;
+  flex-basis: 20%;
+  line-height: 1;
+}
+.lang-block {
+  margin-block: 1rem;
+}
+.lang-block span i {
+  cursor: pointer;
+}
+#social-nav {
+  display: flex;
+  gap: 2rem;
 }
 
 footer hr {
-  color: lightgray;
+  color: #7289da;
 }
 
 .footer-bottom {
@@ -204,9 +232,12 @@ footer hr {
   justify-content: space-between;
 }
 
-.footer-bottom figure,
+/* .footer-bottom figure, */
 .footer-bottom .btn {
-  width: 10%;
-  min-height: 60px;
-  background-color: #3c3f41;
+  background-color: #7289da;
+  padding: 8px 20px 0;
+  border-radius: 30px;
+}
+.footer-bottom .btn a {
+  color: #fff;
 }
